@@ -54,10 +54,13 @@ http://localhost:3000
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Copia ae logo.
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
+* NodeJs
+* Mongoose
+* genarators
+* Agenda
+* Design Patterns
 * etc
