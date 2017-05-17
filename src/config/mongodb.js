@@ -1,5 +1,5 @@
 var port = process.env.MONGO_PORT || 27017;
-var uri = process.env.MONGO_HOST || "mongodb://localhost:" + port + "/processor";
+var uri = process.env.MONGO_HOST || 'mongodb://localhost:' + port + '/processor';
 
 const options = {
     server: {
