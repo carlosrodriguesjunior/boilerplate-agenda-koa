@@ -1,7 +1,7 @@
 "use strict";
 
 const _ = require('lodash');
-const User = require('../../src/models/userModel).User;
+const User = require('../../src/models/userModel').User;
 const UserService = require('../../src/services/userService');
 
 module.exports = (accessProfile, oauthClients) => (
