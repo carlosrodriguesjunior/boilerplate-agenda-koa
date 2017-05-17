@@ -9,8 +9,7 @@ const randomstring = require('randomstring');
 
 class UserService {
 
-    *
-    signUp(user) {
+    *signUp(user) {
         if(user.password)
             user.password = this.generateHash(user.password);
 
@@ -29,13 +28,12 @@ class UserService {
         return yield UserRepository.create(user);
     }
 
-    *
-    passwordReset(email) {
+    *passwordReset(email) {
         
         let user = yield UserRepository.findOneByEmail(email.toLowerCase());
 
         if (!user) {
-            throw "Usuário não encontrado";
+            throw 'Usuário não encontrado';
         }
 
         let newTemporayPassword = randomstring.generate({
@@ -75,8 +73,7 @@ class UserService {
         return bcrypt.compareSync(password, hash);
     }
 
-    *
-    update(user) {
+    *update(user) {
         yield UserRepository.update(user);
     }
 
