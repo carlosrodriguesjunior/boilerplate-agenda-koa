@@ -5,7 +5,7 @@ const jobExecutionRepository = require('../../../src/repositories/jobExecutionRe
 const co = require('co');
 
 function FirstJob(job, done) {
-    co(function * () {
+    co(function *() {
         try {
             let result = yield integration1Service.checkOrder();
 
