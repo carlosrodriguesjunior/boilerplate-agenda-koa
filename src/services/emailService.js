@@ -10,8 +10,7 @@ const co = require('co');
 
 class EmailService {
 
-    *
-    sendNotificationEmail(email, name, title, msg) {
+    *sendNotificationEmail(email, name, title, msg) {
 
         let from_email = new helper.Email("no-reply@blabla.com.br", "integrador");
         let to_email = new helper.Email(email);
@@ -36,8 +35,7 @@ class EmailService {
 
     }
 
-    *
-    buildEmailTemplate(name, title, msg) {
+    *buildEmailTemplate(name, title, msg) {
 
         let data = {
             title: title,
