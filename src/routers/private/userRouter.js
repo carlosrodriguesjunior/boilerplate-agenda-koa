@@ -5,7 +5,7 @@ const Router = require('koa-router');
 
 let userRouter = new Router();
 
-userRouter.get('', function*(next) {
+userRouter.get('', function *(next) {
     try {
         delete this.user.password;
         this.body = this.user;
@@ -17,7 +17,7 @@ userRouter.get('', function*(next) {
     }
 });
 
-userRouter.get('/:email', function*(next) {
+userRouter.get('/:email', function *(next) {
 
     try {
         this.body = yield UserService.findOne(this.request, this.params.email);
@@ -41,7 +41,7 @@ userRouter.get('/:email', function*(next) {
 //     }
 // });
 
-userRouter.put('/', function*(next) {
+userRouter.put('/', function *(next) {
 
     try {
         this.body = yield UserService.update(this.request.body);
