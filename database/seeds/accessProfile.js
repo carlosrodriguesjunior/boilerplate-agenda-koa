@@ -5,7 +5,7 @@ const AccessProfile = require('../../src/models/accessProfileModel').AccessProfi
 module.exports = (telas) => ([
 
     new AccessProfile({
-        nome: "Usuário",
+        nome: 'Usuário',
         admin: true,
         menu: []
     })
