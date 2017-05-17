@@ -3,7 +3,7 @@
 
 const express = require('express');
 const Agenda = require('agenda');
-const Agendash = require('agendash');
+const agendash = require('agendash');
 const mongodb = require('../src/config/mongodb')();
 const db = require('../db');
 
@@ -56,7 +56,7 @@ db.connection.on('connected', () => {
     process.on('SIGTERM', stopAgenda);
     process.on('SIGINT', stopAgenda);
 
-    app.use('/agendash', Agendash(agenda, {
+    app.use('/agendash', agendash(agenda, {
         title: 'Scheduller'
     }));
     app.listen(9000);
