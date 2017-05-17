@@ -5,23 +5,19 @@ const User = require('../models/userModel').User;
 
 class UserRepository {
 
-    *
-    findOne(user) {
+    *findOne(user) {
         return yield User.findById(user._id);
     }
 
-     *
-    findOneByEmail(email) {
+     *findOneByEmail(email) {
         return yield User.findOne({username:email});
     }
 
-    *
-    create(user) {
+    *create(user) {
         return yield User.create(user);
     }
 
-    *
-    update(newUser) {
+    * update(newUser) {
         let user = yield User.findById(newUser._id);
         user.name = newUser.name;
         yield user.save();
