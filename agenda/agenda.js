@@ -1,4 +1,5 @@
 'use strict';
+/*eslint camelcase: ["error", {properties: "never"}]*/
 
 const express = require('express');
 const Agenda = require('agenda');
