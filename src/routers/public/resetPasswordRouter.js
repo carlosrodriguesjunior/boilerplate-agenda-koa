@@ -5,7 +5,7 @@ const UserService = require('../../services/userService');
 
 let resetPasswordRouter = new Router();
 
-resetPasswordRouter.post('/', function* (next) {
+resetPasswordRouter.post('/', function *(next) {
     let email = this.request.body.email;
 
     if (!email) {
