@@ -12,13 +12,13 @@ class EmailService {
 
     *sendNotificationEmail(email, name, title, msg) {
 
-        let from_email = new helper.Email("no-reply@blabla.com.br", "integrador");
-        let to_email = new helper.Email(email);
+        let fromEmail = new helper.Email("no-reply@blabla.com.br", "integrador");
+        let toEmail = new helper.Email(email);
 
         let subject = title;
         let template = yield this.buildEmailTemplate(name, title, msg);
         let content = new helper.Content("text/html", template);
-        let mail = new helper.Mail(from_email, subject, to_email, content);
+        let mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
 
         let request = sendgrid.emptyRequest({
