@@ -15,7 +15,7 @@ function FirstJob(job, done) {
                 result: result,
                 dateExecution: new Date(),
                 isSuccess: true
-            })
+            });
             done();
         } catch (err) {
             yield jobExecutionRepository.create({
@@ -24,7 +24,7 @@ function FirstJob(job, done) {
                 result: err.stack || err,
                 dateExecution: new Date(),
                 isSuccess: false
-            })
+            });
             done(err.stack);
         }
     });
