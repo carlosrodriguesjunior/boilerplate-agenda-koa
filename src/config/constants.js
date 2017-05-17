@@ -9,7 +9,7 @@ const smtpConfig = {
     }
 };
 
-const web = "http://localhost:8080/#/";
+const web = 'http://localhost:8080/#/';
 
 const sendGridKey = '';
 
