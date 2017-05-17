@@ -30,6 +30,7 @@ function FirstJob(job, done) {
     });
 }
 
+
 module.exports = function (agenda) {
     agenda.define('Processar: FirstJob', {
         priority: 'default'
