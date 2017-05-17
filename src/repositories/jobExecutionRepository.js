@@ -5,8 +5,7 @@ const JobExecution = require('../models/jobExecutionModel').JobExecution;
 
 class JobExecutionRepository {
 
-    *
-    create(jobExecution) {
+    * create(jobExecution) {
         return yield JobExecution.create(jobExecution);
     }
 
