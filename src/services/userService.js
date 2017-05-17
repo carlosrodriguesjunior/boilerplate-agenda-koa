@@ -81,6 +81,6 @@ class UserService {
         yield UserRepository.update(user);
     }
 
-};
+}
 
 module.exports = new UserService();
