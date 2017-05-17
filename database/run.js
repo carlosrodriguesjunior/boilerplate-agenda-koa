@@ -7,7 +7,7 @@ const db = require('../db');
 const OAuthClient = require('../src/models/oAuthClientModel').OAuthClient;
 
 db.connection.on('connected', () => {
-    co(function*() {
+    co(function * () {
         try {
             yield new Promise((resolve, reject) => {
                 db.connection.db.dropDatabase(err => {
