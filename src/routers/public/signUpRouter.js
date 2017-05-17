@@ -7,7 +7,7 @@ const UserService = require('../../services/userService');
 
 let signUpRouter = new Router();
 
-signUpRouter.post('/', function* (next) {
+signUpRouter.post('/', function *(next) {
     try {
         this.body = yield UserService.signUp(this.request.body);
         this.status = 200;
@@ -16,7 +16,7 @@ signUpRouter.post('/', function* (next) {
     }
 });
 
-signUpRouter.post('/verifyemail', function* (next) {
+signUpRouter.post('/verifyemail', function *(next) {
     try {
         this.body = yield UserService.verifyEmail(this.request.body);
         this.status = 200;
