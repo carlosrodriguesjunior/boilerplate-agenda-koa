@@ -1,5 +1,7 @@
 # Agendador de Tarefas
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/571dda1401754c87b586c2d68f3ffbb8)](https://www.codacy.com/app/carlosrodriguesjunior/boilerplate-agenda-koa?utm_source=github.com&utm_medium=referral&utm_content=carlosrodriguesjunior/boilerplate-agenda-koa&utm_campaign=badger)
+
 Este projeto tem como objetivo demonstrar a utilização do Agenda.
 
 ### Prerequisites
