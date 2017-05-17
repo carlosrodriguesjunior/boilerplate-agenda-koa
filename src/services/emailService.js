@@ -49,7 +49,6 @@ class EmailService {
         let html = precompile(data);
 
         return html;
-
     }
 
 }
