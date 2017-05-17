@@ -5,7 +5,7 @@ const Router = require('koa-router');
 
 let userRouter = new Router();
 
-userRouter.get('', function *(next) {
+userRouter.get('', function (next) {
     try {
         delete this.user.password;
         this.body = this.user;
