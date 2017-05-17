@@ -2,7 +2,7 @@
 
 const AccessProfile = require('../../src/models/accessProfileModel').AccessProfile;
 
-module.exports = (telas) => ([
+module.exports = telas => ([
 
     new AccessProfile({
         nome: 'Usuário',
