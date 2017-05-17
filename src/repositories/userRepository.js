@@ -17,7 +17,7 @@ class UserRepository {
         return yield User.create(user);
     }
 
-    * update(newUser) {
+    *update(newUser) {
         let user = yield User.findById(newUser._id);
         user.name = newUser.name;
         yield user.save();
