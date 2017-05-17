@@ -28,6 +28,6 @@ class UserRepository {
         return user;
     }
 
-};
+}
 
 module.exports = new UserRepository();
