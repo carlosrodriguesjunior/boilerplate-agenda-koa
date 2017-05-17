@@ -9,6 +9,20 @@ const db = require('../db');
 
 db.connection.on('connected', () => {
     let app = express();
+    
+    let agenda = new Agenda({
+        db: {
+            address: mongodb.connection,
+            collection: 'jobs',
+            options: {
+                server: {
+                    auto_reconnect: true
+                }
+            }
+        },
+        defaultLockLifetime: 50000
+    }, startAgenda);
+    
 
     let startAgenda = () => {
 
@@ -31,19 +45,6 @@ db.connection.on('connected', () => {
         agenda.emit('ready');
         agenda.start();
     };
-
-    let agenda = new Agenda({
-        db: {
-            address: mongodb.connection,
-            collection: 'jobs',
-            options: {
-                server: {
-                    auto_reconnect: true
-                }
-            }
-        },
-        defaultLockLifetime: 50000
-    }, startAgenda);
 
     let stopAgenda = () => {
         agenda.stop(() => process.exit(0));
