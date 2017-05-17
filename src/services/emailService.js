@@ -12,12 +12,12 @@ class EmailService {
 
     *sendNotificationEmail(email, name, title, msg) {
 
-        let fromEmail = new helper.Email("no-reply@blabla.com.br", "integrador");
+        let fromEmail = new helper.Email('no-reply@blabla.com.br', 'integrador');
         let toEmail = new helper.Email(email);
 
         let subject = title;
         let template = yield this.buildEmailTemplate(name, title, msg);
-        let content = new helper.Content("text/html", template);
+        let content = new helper.Content('text/html', template);
         let mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
 
