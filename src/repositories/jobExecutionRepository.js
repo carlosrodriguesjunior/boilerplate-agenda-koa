@@ -11,6 +11,6 @@ class JobExecutionRepository {
     }
 
 
-};
+}
 
 module.exports = new JobExecutionRepository();
