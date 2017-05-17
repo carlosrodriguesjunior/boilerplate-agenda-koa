@@ -20,8 +20,6 @@ resetPasswordRouter.post('/', function* (next) {
     } catch (error) {
         this.status = 404;
         this.body = error.message;
-    } finally {
-
     }
 
 });
