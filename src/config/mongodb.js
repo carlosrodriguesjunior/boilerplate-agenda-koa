@@ -14,6 +14,6 @@ const options = {
 module.exports = (mode) => {
     return {
         connection: uri,
-        options: options
+        options
     };
 };
