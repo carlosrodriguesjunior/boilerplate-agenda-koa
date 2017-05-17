@@ -10,7 +10,7 @@ resetPasswordRouter.post('/', function *(next) {
 
     if (!email) {
         this.status = 500;
-        this.body = "É necessário informar um email";
+        this.body = 'É necessário informar um email';
         return;
     }
 
