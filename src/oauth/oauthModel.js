@@ -53,9 +53,9 @@ model.getUser = function (username, password, next) {
 model.saveAccessToken = function (token, clientId, expires, userId, next) {
     let accessToken = new OAuthToken({
         accessToken: token,
-        clientId: clientId,
+        clientId,
         user: userId,
-        expires: expires
+        expires
     });
 
     let invalidUserClient;
