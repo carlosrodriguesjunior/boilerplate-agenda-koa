@@ -66,15 +66,15 @@ class UserService {
     *
     logout(token) {
         return yield OAuthToken.remove({ accessToken: token });
-    };
+    }
 
     generateHash(password) {
         return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-    };
+    }
 
     validPassword(hash, password) {
         return bcrypt.compareSync(password, hash);
-    };
+    }
 
     *
     update(user) {
