@@ -12,7 +12,7 @@ function FirstJob(job, done) {
             yield jobExecutionRepository.create({
                 jobName: 'FirstJob',
                 integration: 'Integration 1',
-                result: result,
+                result,
                 dateExecution: new Date(),
                 isSuccess: true
             });
