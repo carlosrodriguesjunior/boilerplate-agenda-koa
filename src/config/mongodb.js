@@ -11,7 +11,7 @@ const options = {
     }
 };
 
-module.exports = (mode) => {
+module.exports = mode => {
     return {
         connection: uri,
         options
