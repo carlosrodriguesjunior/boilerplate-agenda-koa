@@ -10,8 +10,8 @@ var model = module.exports;
 
 model.getClient = function (clientId, clientSecret, next) {
     OAuthClient.findOne({
-        clientId: clientId,
-        clientSecret: clientSecret
+        clientId,
+        clientSecret
     }).then(function (client) {
         return next(false, clientId);
     }).catch(function (err) {
