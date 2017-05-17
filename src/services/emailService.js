@@ -45,7 +45,7 @@ class EmailService {
             msg: msg
         };
 
-        let precompile = handlebars.compile(template);
+        let precompile = handlebars.compile('');
         let html = precompile(data);
 
         return html;
