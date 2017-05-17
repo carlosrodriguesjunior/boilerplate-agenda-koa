@@ -5,7 +5,7 @@ const OAuthToken = require('../models/oAuthTokenModel').OAuthToken;
 const UserRepository = require('../repositories/userRepository');
 const EmailService = require('../services/emailService');
 const bcrypt = require('bcryptjs');
-const randomstring = require("randomstring");
+const randomstring = require('randomstring');
 
 class UserService {
 
@@ -58,13 +58,12 @@ class UserService {
 
     }
 
-    * verifyEmail(email){
+    *verifyEmail(email){
         let user = yield UserRepository.findOne(email);
-        return user ? true : false
+        return user ? true : false;
     }
 
-    *
-    logout(token) {
+    *logout(token) {
         return yield OAuthToken.remove({ accessToken: token });
     }
 
