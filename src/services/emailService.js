@@ -38,7 +38,7 @@ class EmailService {
     *buildEmailTemplate(name, title, msg) {
 
         let data = {
-            title
+            title,
             name,
             msg
         };
